@@ -1,0 +1,51 @@
+{
+    "name": "Sprawa",
+    "fields": [
+        {
+            "fieldName": "stan",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "kwota",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "klient",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "adres",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "utworzona",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "data",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180904143643",
+    "entityTableName": "sprawa",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

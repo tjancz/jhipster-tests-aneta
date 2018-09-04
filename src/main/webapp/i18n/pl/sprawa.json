@@ -1,0 +1,30 @@
+
+{
+    "crmApp": {
+        "sprawa" : {
+            "home": {
+                "title": "Sprawas",
+                "createLabel": "Dodaj Sprawa",
+                "createOrEditLabel": "Dodaj lub edytuj: Sprawa"
+            },
+            "created": "Utworzono nowy Sprawa z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono Sprawa z identyfikatorem {{ param }}",
+            "deleted": "Usunięto Sprawa z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Sprawa {{ id }}?"
+            },
+            "detail": {
+                "title": "Sprawa"
+            },
+            "stan": "Stan",
+            "kwota": "Kwota",
+            "klient": "Klient",
+            "adres": "Adres",
+            "telefon": "Telefon",
+            "status": "Status",
+            "numer": "Numer",
+            "utworzona": "Utworzona",
+            "data": "Data"
+        }
+    }
+}

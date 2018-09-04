@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-sprawa-heading" jhiTranslate="crmApp.sprawa.home.createOrEditLabel">Create or edit a Sprawa</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!sprawa.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="sprawa.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.stan" for="field_stan">Stan</label>
+                    <input type="text" class="form-control" name="stan" id="field_stan"
+                        [(ngModel)]="sprawa.stan" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.kwota" for="field_kwota">Kwota</label>
+                    <input type="text" class="form-control" name="kwota" id="field_kwota"
+                        [(ngModel)]="sprawa.kwota" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.klient" for="field_klient">Klient</label>
+                    <input type="text" class="form-control" name="klient" id="field_klient"
+                        [(ngModel)]="sprawa.klient" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.adres" for="field_adres">Adres</label>
+                    <input type="text" class="form-control" name="adres" id="field_adres"
+                        [(ngModel)]="sprawa.adres" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.telefon" for="field_telefon">Telefon</label>
+                    <input type="text" class="form-control" name="telefon" id="field_telefon"
+                        [(ngModel)]="sprawa.telefon" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.status" for="field_status">Status</label>
+                    <input type="text" class="form-control" name="status" id="field_status"
+                        [(ngModel)]="sprawa.status" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.numer" for="field_numer">Numer</label>
+                    <input type="text" class="form-control" name="numer" id="field_numer"
+                        [(ngModel)]="sprawa.numer" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.utworzona" for="field_utworzona">Utworzona</label>
+                    <div class="input-group">
+                        <input id="field_utworzona" type="text" class="form-control" name="utworzona" ngbDatepicker  #utworzonaDp="ngbDatepicker" [(ngModel)]="sprawa.utworzona"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="utworzonaDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="crmApp.sprawa.data" for="field_data">Data</label>
+                    <div class="input-group">
+                        <input id="field_data" type="text" class="form-control" name="data" ngbDatepicker  #dataDp="ngbDatepicker" [(ngModel)]="sprawa.data"
+                        />
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

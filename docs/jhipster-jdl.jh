@@ -1,0 +1,11 @@
+ entity Sprawa {
+	stan String,
+    kwota String,
+    klient String,
+    adres String,
+    telefon String,
+    status String,
+    numer String,
+    utworzona LocalDate,
+    data LocalDate  
+ }

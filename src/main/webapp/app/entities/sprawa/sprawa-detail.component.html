@@ -1,0 +1,59 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sprawa">
+            <h2><span jhiTranslate="crmApp.sprawa.detail.title">Sprawa</span> {{sprawa.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="crmApp.sprawa.stan">Stan</span></dt>
+                <dd>
+                    <span>{{sprawa.stan}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.kwota">Kwota</span></dt>
+                <dd>
+                    <span>{{sprawa.kwota}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.klient">Klient</span></dt>
+                <dd>
+                    <span>{{sprawa.klient}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.adres">Adres</span></dt>
+                <dd>
+                    <span>{{sprawa.adres}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.telefon">Telefon</span></dt>
+                <dd>
+                    <span>{{sprawa.telefon}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.status">Status</span></dt>
+                <dd>
+                    <span>{{sprawa.status}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.numer">Numer</span></dt>
+                <dd>
+                    <span>{{sprawa.numer}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.utworzona">Utworzona</span></dt>
+                <dd>
+                    <span>{{sprawa.utworzona}}</span>
+                </dd>
+                <dt><span jhiTranslate="crmApp.sprawa.data">Data</span></dt>
+                <dd>
+                    <span>{{sprawa.data}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sprawa', sprawa.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
